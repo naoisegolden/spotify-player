@@ -1,4 +1,5 @@
 // https://api.spotify.com/v1/search?q=%22Isabel%20F%C3%A8lix%22&type=track
+// https://api.spotify.com/v1/tracks/2Ct1gb8w9f189Dq8BnsEwj
 'use strict';
 
 document.querySelector("#search_form").addEventListener("submit", function(event) {
@@ -17,24 +18,27 @@ document.querySelector("#search_form").addEventListener("submit", function(event
 
   ajax(url, {}, function(response) {
     try {
-      // console.log(response);
-      response.tracks.items.forEach(function(item){
-        // createSong(song_list,item.album.name,item.album.artists[0].name);
-        // console.log(item.album.name);
-        // console.log(item.artists[0].name);
-        createSong(song_list,item.album.name,item.artists[0].name);
-      });
+      console.log(response);
+      if (response.tracks.items.length === 0) {
+        createSong(song_list, "No songs found!","");
+      } else {
+        response.tracks.items.forEach(function(item) {
+          createSong(song_list, item.album.name, item.artists[0].name,item.id);
+        });
+      }
     } catch (e) {
-      createSong(song_list, "Nothing found", "-");
+      createSong(song_list, "Error getting albums", e);
     }
   });
 
 });
 
-function createSong(parent, title, author) {
+function createSong(parent, title, author, id) {
   var li = document.createElement("li");
   var h3 = document.createElement("h3");
   h3.innerHTML = title;
+  h3.id = id;
+  h3.addEventListener("click",songClick);
   var h4 = document.createElement("h4");
   h4.innerHTML = author;
   parent.appendChild(li);
@@ -52,3 +56,8 @@ function ajax(url, data, callback) {
     callback(response);
   };
 };
+
+function songClick() {
+  // console.log(this.id);
+  
+}
