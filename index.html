@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- http://www.taringa.net/posts/videos/17532834/Curso-de-Bootstrap-3-1-Video-Tutoriales-Espanol.html -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Players</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <form class="navbar-form navbar-left" role="search">
+          <a href="#" class="navbar-brand">Spotify Player</a>
+          <div class="form-group">
+            <input type="text" class="form-control search_song" placeholder="Search">
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#search" data-toggle="tab">Search results</a>
+          </li>
+          <li><a href="#playing" data-toggle="tab">Now playing</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="search">
+            <ul>
+              <li>
+                <h3>Song's title</h3>
+                <h4>Song's subtitle</h4>
+              </li>
+              <li>
+                <h3>Song's title</h3>
+                <h4>Song's subtitle</h4>
+              </li>
+              <li>
+                <h3>Song's title</h3>
+                <h4>Song's subtitle</h4>
+              </li>
+              <li>
+                <h3>Song's title</h3>
+                <h4>Song's subtitle</h4>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="playing">
+            <h4>Perfil</h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure repudiandae expedita quidem voluptates natus praesentium illo, nobis possimus saepe sint perspiciatis, tenetur itaque atque fugit, explicabo numquam harum? Dolorem, optio?
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
