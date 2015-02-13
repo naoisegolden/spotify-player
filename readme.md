@@ -52,8 +52,9 @@ Use Grunt.js for taks.
     * `https://api.spotify.com/v1/search` to search for `type=track`
     * `https://api.spotify.com/v1/tracks/{id}` to get a track's info and audio file.
 6. Use the code shown at the Appendix for the player.
-7. Use [HTML5 media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events) to update the progress bar or the status of the play/pause button.
-8. Use a search form to search and display the results on a list. When a song is clicked/tapped it starts reproducing and shows info and album cover in the player.
+7. Check out the [HTML5 Media API](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video) to know how to control the `audio` element with Javascript.
+8. Use [HTML5 media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events) to update the progress bar or the status of the play/pause button.
+9. Use a search form to search and display the results on a list. When a song is clicked/tapped it starts reproducing and shows info and album cover in the player.
 
 ### 4. Deploy
 
