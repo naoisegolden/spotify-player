@@ -11,14 +11,14 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'build/main.min.js': ['javascript/*.js']
+          'build/application.min.js': ['src/javascript/*.js']
         }
       }
     },
     sass: {
       dist: {
         files: {
-         'build/main.css':'sass/main.scss'
+         'build/application.min.css':'src/styles/*.scss'
         }
       }
     },
@@ -37,9 +37,21 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
+      bootstrap_css: {
         src: 'bower_components/bootstrap/dist/css/bootstrap.min.css',
         dest: 'build/bootstrap.min.css',
+      },
+      bootstrap_js: {
+        src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        dest: 'build/bootstrap.min.js',
+      },
+      jquery: {
+        src: 'bower_components/jquery/dist/jquery.min.js',
+        dest: 'build/jquery.min.js',
+      },
+      images: {
+        src: 'images/default.jpg',
+        dest: 'build/images/default.jpg',
       }
     },
     'gh-pages': {
