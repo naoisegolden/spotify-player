@@ -2,11 +2,12 @@
 // https://api.spotify.com/v1/tracks/2Ct1gb8w9f189Dq8BnsEwj
 'use strict';
 
+var song_list = document.querySelector("#song_list");
+
 document.querySelector("#search_form").addEventListener("submit", function(event) {
   event.preventDefault();
   // console.log(event);
   var search_text = document.querySelector("#search_text");
-  var song_list = document.querySelector("#song_list");
   // console.log(search_text.value);
   var URL = "https://api.spotify.com/v1/search?q=";
   var url = URL + "\"" + search_text.value + "\"&type=track";
@@ -22,33 +23,38 @@ document.querySelector("#search_form").addEventListener("submit", function(event
     try {
       console.log(response);
       if (response.tracks.items.length === 0) {
-        createSong(song_list, "No songs found!", "");
+        createSong("No songs found!", "");
       } else {
         response.tracks.items.forEach(function(item) {
-          createSong(song_list, item.album.name, item.artists[0].name, item.id);
+          createSongItem(item);
         });
       }
     } catch (e) {
-      createSong(song_list, "Error getting albums", e);
+      createSong("Error getting albums", e);
     }
   });
 
 });
 
-function createSong(parent, title, author, id) {
+function createSongItem(item) {
+  var h3 = createSong(item.album.name,item.artists[0].name);
+  h3.id = item.id;
+  h3.img = item.album.images[0];
+}
+
+function createSong(title, author) {
   var li = document.createElement("li");
   var h3 = document.createElement("h3");
   h3.innerHTML = title;
-  if (id) {
-    h3.id = id;
-  }
   h3.addEventListener("click", songClick);
   var h4 = document.createElement("h4");
   h4.innerHTML = author;
-  parent.appendChild(li);
+  song_list.appendChild(li);
   li.appendChild(h3);
   li.appendChild(h4);
+  return h3;
 }
+
 
 function ajax(url, data, callback) {
   var xhr = new XMLHttpRequest();
@@ -64,7 +70,8 @@ function ajax(url, data, callback) {
 function songClick() {
   if (this.id) {
     document.querySelector("#playing_tab").click();
-    document.querySelector("#album_img").src="https://i.scdn.co/image/c6aa825443428782713e047893aa043a30cd357d";
+    // document.querySelector("#album_img").src="https://i.scdn.co/image/c6aa825443428782713e047893aa043a30cd357d";
+    document.querySelector("#album_img").src=this.img.url;
 
     console.log(this.id);
   }
