@@ -9,19 +9,30 @@ module.exports = function(grunt) {
         mangle: false,
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      my_target: {
+      js: {
         files: {
           'build/application.min.js': ['src/javascript/*.js']
         }
       }
     },
-    sass: {
-      dist: {
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
         files: {
-         'build/application.min.css':'src/styles/*.scss'
+          'build/application.min.css': ['src/styles/*.css']
         }
       }
     },
+    // sass: {
+    //   dist: {
+    //     files: {
+    //      'build/application.min.css':'src/styles/*.scss'
+    //     }
+    //   }
+    // },
     processhtml: {
       dist: {
         options: {
@@ -64,7 +75,8 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin tasks
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  // grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -72,5 +84,5 @@ module.exports = function(grunt) {
 
   // Custom tasks
   grunt.registerTask('deploy', ['gh-pages']);
-  grunt.registerTask('default', ['uglify', 'sass', 'copy', 'processhtml']);
+  grunt.registerTask('default', ['uglify', 'cssmin', /* 'sass', */ 'copy', 'processhtml']);
 };

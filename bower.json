@@ -15,5 +15,8 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "~0.12.1"
   }
 }
