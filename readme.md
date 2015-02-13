@@ -1,6 +1,6 @@
 # Week 5 Final Exercise
 
-It's Friday and we've had a hard week learning lots of new things. Hopefully the Tinder app we just developed has yielded an interesting date for tonight (rumor has it that Lando Calrissian has a special guest for dinner!) What we need now is to create the right atmosphere… how about putting on some music?!
+It's Friday and we've had a hard week learning lots of new things. Hopefully the [Tinder app](https://github.com/naoisegolden/tinder-wars) we just developed has yielded an interesting date for tonight (rumor has it that Lando Calrissian has a special guest for dinner!) What we need now is to create the right atmosphere… how about putting on some music?!
 
 ### Enter the Spotify API
 
