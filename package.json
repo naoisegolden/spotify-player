@@ -1,0 +1,22 @@
+{
+  "name": "spotify-player",
+  "version": "1.0.0",
+  "description": "An app that uses Spotify's public web API.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naoisegolden/spotify-player.git"
+  },
+  "author": "Naoise Golden <naoise.golden@gmail.com> (https://github.com/naoisegolden)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naoisegolden/spotify-player/issues"
+  },
+  "homepage": "https://github.com/naoisegolden/spotify-player",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
