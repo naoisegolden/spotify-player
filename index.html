@@ -25,10 +25,10 @@
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" id="search_form" role="search">
           <a href="#" class="navbar-brand">Spotify Player</a>
           <div class="form-group">
-            <input type="text" class="form-control search_song" placeholder="Search">
+            <input type="text" id="search_text" class="form-control search_song" placeholder="Search">
           </div>
         </form>
       </div>
@@ -48,19 +48,7 @@
         <div class="tab-content">
 
           <div class="tab-pane fade in active" id="search">
-            <ul>
-              <li>
-                <h3>Song's title</h3>
-                <h4>Author</h4>
-              </li>
-              <li>
-                <h3>Song's title</h3>
-                <h4>Author</h4>
-              </li>
-              <li>
-                <h3>Song's title</h3>
-                <h4>Author</h4>
-              </li>
+            <ul id="song_list">
               <li>
                 <h3>Song's title</h3>
                 <h4>Author</h4>
