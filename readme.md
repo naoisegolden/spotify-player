@@ -4,7 +4,7 @@ It's Friday and we've had a hard week learning lots of new things. Hopefully the
 
 ### Enter the Spotify API
 
-Spotify loves developers. That's why they have an [open free web API](https://developer.spotify.com/web-api/) that let's you access artists, albums and even 30 seconds of any song!
+Spotify loves developers. That's why they have an [open free web API](https://developer.spotify.com/web-api/) that lets you access artists, albums and even 30 seconds of any song!
 
 ## Exercise: Spotify Mini Player
 
