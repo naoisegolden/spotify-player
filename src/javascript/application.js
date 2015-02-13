@@ -40,6 +40,7 @@ function createSongItem(item) {
   var h3 = createSong(item.album.name,item.artists[0].name);
   h3.id = item.id;
   h3.img = item.album.images[0];
+  h3.preview_url = item.preview_url;
 }
 
 function createSong(title, author) {
@@ -72,7 +73,10 @@ function songClick() {
     document.querySelector("#playing_tab").click();
     // document.querySelector("#album_img").src="https://i.scdn.co/image/c6aa825443428782713e047893aa043a30cd357d";
     document.querySelector("#album_img").src=this.img.url;
+    var audio = document.querySelector("#audio");
+    audio.src = this.preview_url;
+    audio.play();
 
-    console.log(this.id);
+    // console.log(this.id);
   }
 }
