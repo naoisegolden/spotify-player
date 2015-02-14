@@ -166,6 +166,10 @@ progress::-moz-progress-bar {
 * {
   box-sizing: border-box; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 html, body {
   height: 100%; }
 
@@ -227,13 +231,27 @@ header {
   margin: 10px auto 0;
   width: 300px;
   padding-bottom: 10px; }
+  .results.empty:before {
+    content: "No results";
+    display: block;
+    line-height: 4em;
+    text-align: center; }
   .results li {
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    line-height: 1.6em; }
     .results li:last-child {
       border-bottom: none; }
+    .results li.selected:before {
+      content: "\266a";
+      float: right;
+      font-size: 1.5em;
+      line-height: 2em; }
+  .results .uri {
+    display: block; }
+  .results .artist, .results .song {
+    display: block; }
   .results .artist {
-    font-weight: 600;
-    line-height: 1.6em; }
+    font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */
