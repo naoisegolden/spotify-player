@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- header and search -->
+      <header>
+        <h1 class="logo">Spotify Player</h1>
+        <form id="search">
+          <input type="text" name="query" placeholder="Search for a track...">
+          <button type="submit">Search</button>
+        </form>
+      </header>
+      <!-- /header and search -->
+
+      <!-- widget -->
+      <div class="widget">
+        <div class="header">
+          <div class="btn-play disabled"></div>
+          <div class="metadata">
+            <p class="title">Song title</p>
+            <p class="author">Song author</p>
+            <div class="seekbar">
+              <progress value="1" max="30"></progress>
+            </div>
+          </div>
+        </div>
+        <div class="cover">
+          <img src="images/default.jpg">
+        </div>
+        <audio id="audio"></audio>
+      </div>
+      <!-- /widget -->
+
+      <!-- search results -->
+      <ul class="results">
+        <li>
+          <p class="artist">Van Morrison</p>
+          <p class="track">Brown Eyed Girl</p>
+        </li>
+        <li>
+          <p class="artist">Reel Big Fish</p>
+          <p class="track">Brown Eyed Girl</p>
+        </li>
+        <li>
+          <p class="artist">Everclear</p>
+          <p class="track">Brown Eyed Girl</p>
+        </li>
+      </ul>
+      <!-- /search results -->
+    </div>
+
+    <script src="javascript/application.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin reset-button {
+  text-indent: -999px;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}

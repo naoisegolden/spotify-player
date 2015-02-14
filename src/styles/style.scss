@@ -1,0 +1,89 @@
+@import 'meyer-reset';
+@import 'mixins';
+@import 'player';
+
+$widget-width: 300px;
+$logo-width: 30px;
+$default-gutter: 10px;
+$submit-width: 30px;
+$translucid-white: rgba(255, 255, 255, .4);
+$default-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-image: url(../images/background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: $default-font;
+  font-weight: 300;
+}
+
+.container {
+  max-width: $widget-width + 2*$default-gutter;
+  background-color: rgba(255, 255, 255, .6);
+  //height: 100%;
+  margin: 0 auto;
+  padding-top: 1px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .4);
+}
+
+header {
+  @include clearfix;
+  margin: $default-gutter auto 0;
+  width: $widget-width;
+}
+
+.logo {
+  @include hide-text;
+  float: left;
+  height: $logo-width;
+  width: $logo-width;
+  background: url(../images/spotify-logo.png) 0 0 no-repeat ;
+  background-size: $logo-width $logo-width;
+  margin-right: $default-gutter;
+}
+
+[name=query] {
+  border: 1px solid lightgrey;
+  height: $logo-width;
+  font-size: $logo-width - 15px;
+  padding-left: 7px;
+  width: $widget-width - $logo-width - $submit-width - 2*$default-gutter;
+}
+
+[type=submit] {
+  @include reset-button;
+  float: right;
+  height: $submit-width;
+  width: $submit-width;
+  vertical-align: top;
+  background-size: $submit-width $submit-width;
+  background-image: url('data:image/svg+xml;utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="50" width="50"><path d="M44.881,37.322l-11.401-11.37c1.197-2.351,1.844-4.962,1.844-7.676c0-4.528-1.764-8.785-4.965-11.986 C27.157,3.088,22.9,1.325,18.371,1.325c-4.527,0-8.786,1.763-11.986,4.965c-3.202,3.202-4.966,7.459-4.966,11.987 s1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402 c1.03,1.03,2.382,1.546,3.732,1.546s2.702-0.516,3.732-1.546C46.943,42.726,46.943,39.384,44.881,37.322z M10.863,25.784 c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11 c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109 C15.535,28.894,12.869,27.79,10.863,25.784z" fill="grey" /></svg>');
+}
+
+.results {
+  margin: $default-gutter auto 0;
+  width: $widget-width;
+  padding-bottom: $default-gutter;
+
+  li {
+    padding: $default-gutter 0;
+    border-bottom: 1px solid $translucid-white;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .artist {
+    font-weight: 600;
+    line-height: 1.6em;
+  }
+}
