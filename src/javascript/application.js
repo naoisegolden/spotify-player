@@ -1,9 +1,10 @@
 (function() {
+  "use strict";
 
   // Configuration
-  var SEARCH_URL = "https://api.spotify.com/v1/search?type=track&q=";
-  var TRACK_URL = "https://api.spotify.com/v1/tracks/";
   var MAX_RESULTS = 10;
+  var SEARCH_URL = "https://api.spotify.com/v1/search?type=track&limit=" + MAX_RESULTS + "&q=";
+  var TRACK_URL = "https://api.spotify.com/v1/tracks/";
   var TEMPLATE = document.querySelector("#template").innerHTML;
 
   // Elements
@@ -80,7 +81,7 @@
   }
 
   function searchTrack(query) {
-    var url = SEARCH_URL + encodeURIComponent(query) + "&limit="+MAX_RESULTS;
+    var url = SEARCH_URL + encodeURIComponent(query);
 
     ajax(url, updateList);
   }
