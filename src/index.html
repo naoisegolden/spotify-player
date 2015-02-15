@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Spotify Player</title>
+    <title>Spotify Mini Player</title>
+    <meta name="description" content="An app that uses Spotify's public web API.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css styles/style.min.css -->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- /build -->
   </head>
   <body>
     <div class="container">
@@ -43,6 +46,10 @@
       <!-- /search results -->
     </div>
 
+    <footer>
+      <a href="https://github.com/naoisegolden/spotify-player">fork me on github</a>
+    </footer>
+
     <script id="template" type="text/template">
       <li>
         <a class="uri" href="{uri}">
@@ -51,6 +58,8 @@
         </a>
       </li>
     </script>
+    <!-- build:js javascript/application.min.js -->
     <script src="javascript/application.js"></script>
+    <!-- /build -->
   </body>
 </html>

@@ -197,6 +197,14 @@ header {
     display: table;
     clear: both; }
 
+footer {
+  margin: 10px auto 10px;
+  width: 300px;
+  text-align: center;
+  font-size: .8em; }
+  footer a {
+    color: rgba(255, 255, 255, 0.4); }
+
 .logo {
   text-indent: 100%;
   white-space: nowrap;

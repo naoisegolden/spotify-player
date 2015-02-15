@@ -44,6 +44,17 @@ header {
   width: $widget-width;
 }
 
+footer {
+  margin: $default-gutter auto $default-gutter;
+  width: $widget-width;
+  text-align: center;
+  font-size: .8em;
+
+  a {
+    color: $translucid-white;
+  }
+}
+
 .logo {
   @include hide-text;
   float: left;
