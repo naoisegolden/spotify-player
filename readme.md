@@ -1,6 +1,6 @@
 # Week 5 Final Exercise
 
-It's Friday and we've had a hard week learning lots of new things. Hopefully the [Tinder app](https://github.com/naoisegolden/tinder-wars) we just developed has yielded an interesting date for tonight (rumor has it that Lando Calrissian has a special guest for dinner!) What we need now is to create the right atmosphere… how about putting on some music?!
+It's Friday and we've had a hard week learning lots of new things. Hopefully the Tinder app we just developed has yielded an interesting date for tonight (rumor has it that Lando Calrissian has a special guest for dinner!) What we need now is to create the right atmosphere… how about putting on some music?!
 
 ### Enter the Spotify API
 
@@ -22,14 +22,14 @@ We will be following the [Github Flow](https://guides.github.com/introduction/fl
 Use the following folder structure:
 ```
 src/
-  styles/*.css
-  javascript/*.js
-  images/*.png
+  javascript/*
+  styles/*
+  images/*
   index.html
 build/
-  images/*.png
-  application.js
-  styles.css
+  javascript/application.min.js
+  styles/style.min.css
+  images/*
   index.html
 ```
 
@@ -256,3 +256,8 @@ progress::-moz-progress-bar {
 This is how it looks:
 
 ![player widget](./spotify-widget.png)
+
+### Appendix: Solution
+
+- [Version 0.0](https://github.com/naoisegolden/spotify-player/tree/v0.0) - Basic folder structure
+- [Version 1.0](https://github.com/naoisegolden/spotify-player/tree/v1.0) - Full working version with deploy task
