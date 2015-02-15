@@ -1,46 +1,47 @@
-* { box-sizing: border-box; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 body {
-  background-color: #000000;
-  font-family: 'Open Sans', 'Hevetica Neue', Helvetica, sans-serif;
-  color: #3c3c3c;
-  font-weight: normal;
-  margin: 0;
-}
+  line-height: 1; }
 
-h1 {
-  font-weight: normal;
-  text-align: center;
-  display:  none;
-}
+ol, ul {
+  list-style: none; }
 
-#subtitle {
-  margin: auto;
-  text-align: center;
-  color: #FFFFFF;
-}
+blockquote, q {
+  quotes: none; }
 
-#logo {
-  width: 300px;
-  height: auto;
-  display: block;
-  margin: auto;
-}
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .widget {
   width: 300px;
   margin: 10px auto 0;
   border-radius: 5px;
   overflow: hidden;
-  display: block;
-}
+  display: block; }
 
 .header {
   height: 78px;
   background-color: #ccc;
   position: relative;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 .btn-play {
   margin: 9px;
@@ -49,9 +50,10 @@ h1 {
   float: left;
   border-radius: 50px;
   border: 1px solid #3c3c3c;
-  user-select: none;
-  -webkit-user-select: none;
-}
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none; }
 
 .btn-play:after {
   content: ' ';
@@ -65,21 +67,17 @@ h1 {
   top: -18px;
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
-  border-left: 30px solid #3c3c3c;
-}
+  border-left: 30px solid #3c3c3c; }
 
 .btn-play:hover {
   cursor: pointer;
-  border-color: #666;
-}
+  border-color: #666; }
 
 .btn-play:hover:after {
-  border-left-color: #666;
-}
+  border-left-color: #666; }
 
 .btn-play:active:after {
-  border-left-color: #000;
-}
+  border-left-color: #000; }
 
 .btn-play.playing:before, .btn-play.playing:after {
   width: 9px;
@@ -90,38 +88,30 @@ h1 {
   top: 22px;
   left: 27px;
   border: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 .btn-play.playing:after {
-  left: 43px;
-}
+  left: 43px; }
 
 .btn-play.playing:hover:before, .btn-play.playing:hover:after {
-  background-color: #666;
-}
+  background-color: #666; }
 
 .btn-play.playing:active:before, .btn-play.playing:active:after {
-  background-color: #000;
-}
+  background-color: #000; }
 
 .btn-play.disabled {
-  border-color: #888;
-}
+  border-color: #888; }
 
 .btn-play.disabled:hover {
-  cursor: auto;
-}
+  cursor: auto; }
 
 .btn-play.disabled:after {
-  border-left-color: #888;
-}
+  border-left-color: #888; }
 
 .metadata {
   display: inline-block;
   padding: 10px;
-  width: calc(100% - 100px);
-}
+  width: calc(100% - 100px); }
 
 .title, .author {
   overflow: hidden;
@@ -132,34 +122,28 @@ h1 {
   line-height: 1.4em;
   height: 1.4em;
   font-size: 14px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .author {
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 .seekbar {
   margin-top: 5px;
-  width: 100%;
-}
+  width: 100%; }
 
 .cover {
   height: 300px;
-  position: relative;
-}
+  position: relative; }
 
 .cover img {
   max-width: 100%;
   max-height: 100%;
   position: absolute;
   left: 0;
-  border: 0;
-}
+  border: 0; }
 
 audio {
-  display: none;
-}
+  display: none; }
 
 progress {
   width: 100%;
@@ -168,95 +152,106 @@ progress {
   background-color: #3e3e40;
   position: relative;
   border: 0;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 progress::-webkit-progress-bar {
-  background-color: #3e3e40;
-}
+  background-color: #3e3e40; }
 
 progress::-webkit-progress-value {
-  background-color: #45a800;
-}
+  background-color: #45a800; }
 
 progress::-moz-progress-bar {
-  background-color: #45a800;
-}
+  background-color: #45a800; }
 
-input {
-  line-height: 1.7em;
-  width: 280px;
-  display: block;
-  margin: 5px auto;
-  padding: 0 12px;
-  background-color: transparent;
-  outline: none;
-  border: 1px solid #999;
-  font-size: 13px;
-}
+* {
+  box-sizing: border-box; }
 
-input:hover {
-  background-color: #fff;
-}
-
-button {
-  display: block;
-  margin: auto;
-  padding: .4rem .8rem;
-  outline: 0;
-  border: 0;
-  background-color: #7AB800;
-  border-radius: 2px;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: rgba(119,173,16, 1);
-}
-
-input[type="text"], textarea {
-  background-color: #FFFFFF;
-}
-
-#results {
-  margin-top: 50px;
-  list-style: none;
-  padding: 0;
-}
-
-.empty {
-  display:none;
-}
-
-#results li {
-  background-color: #ecf0f1;
-}
-
-#results li:nth-child(2n+1) {
-  background-color: #ccc;
-}
-
-#results li a {
-  color: #3c3c3c;
+a {
   text-decoration: none;
-  display: block;
-  padding: 15px 20px;
-}
+  color: black; }
 
-#results li a:hover {
-  background-color: #aaa;
-}
+html, body {
+  height: 100%; }
 
-#results li a span {
-  max-width: 300px;
-  max-width: 450px;
+body {
+  background-image: url(../images/background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
+
+.container {
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 auto;
-  display: block;
-  line-height: 1.3em;
-  font-size: 0.8rem;
-}
+  padding-top: 1px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4); }
 
-#results li a .artist {
-  color: #3c3c3c;
-  font-size: 1rem;
-}
+header {
+  margin: 10px auto 0;
+  width: 300px; }
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.logo {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  float: left;
+  height: 30px;
+  width: 30px;
+  background: url(../images/spotify-logo.png) 0 0 no-repeat;
+  background-size: 30px 30px;
+  margin-right: 10px; }
+
+[name=query] {
+  border: 1px solid lightgrey;
+  height: 30px;
+  font-size: 15px;
+  padding-left: 7px;
+  width: 220px; }
+
+[type=submit] {
+  text-indent: -999px;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  float: right;
+  height: 30px;
+  width: 30px;
+  vertical-align: top;
+  background-size: 30px 30px;
+  background-image: url('data:image/svg+xml;utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="50" width="50"><path d="M44.881,37.322l-11.401-11.37c1.197-2.351,1.844-4.962,1.844-7.676c0-4.528-1.764-8.785-4.965-11.986 C27.157,3.088,22.9,1.325,18.371,1.325c-4.527,0-8.786,1.763-11.986,4.965c-3.202,3.202-4.966,7.459-4.966,11.987 s1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402 c1.03,1.03,2.382,1.546,3.732,1.546s2.702-0.516,3.732-1.546C46.943,42.726,46.943,39.384,44.881,37.322z M10.863,25.784 c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11 c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109 C15.535,28.894,12.869,27.79,10.863,25.784z" fill="grey" /></svg>'); }
+
+.results {
+  margin: 10px auto 0;
+  width: 300px;
+  padding-bottom: 10px; }
+  .results.empty:before {
+    content: "No results";
+    display: block;
+    line-height: 4em;
+    text-align: center; }
+  .results li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    line-height: 1.6em; }
+    .results li:last-child {
+      border-bottom: none; }
+    .results li.selected:before {
+      content: "\266a";
+      float: right;
+      font-size: 1.5em;
+      line-height: 2em; }
+  .results .uri {
+    display: block; }
+  .results .artist, .results .song {
+    display: block; }
+  .results .artist {
+    font-weight: 600; }
+
+/*# sourceMappingURL=style.css.map */
